@@ -11,7 +11,7 @@ describe("GET / ", () => {
 
     const response = await request(app).get('/')
     
-    expect(response.text).toContain('<h1>Lista de nomes cadastrados no banco de dados</h1>')
+    expect(response.text).toContain('<h1>Full Cycle Rocks!</h1>')
     expect(response.statusCode).toBe(200)
 
   })
