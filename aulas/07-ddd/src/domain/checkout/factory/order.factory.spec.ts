@@ -14,6 +14,13 @@ describe("Order factory unit test", () => {
           quantity: 1,
           price: 100,
         },
+        {
+            id: uuid(),
+            name: "Product 2",
+            productId: uuid(),
+            quantity: 10,
+            price: 200,
+          },
       ],
     };
 
@@ -21,6 +28,6 @@ describe("Order factory unit test", () => {
 
     expect(order.id).toEqual(orderProps.id);
     expect(order.customerId).toEqual(orderProps.customerId);
-    expect(order.items.length).toBe(1);
+    expect(order.items.length).toBe(2);
   });
 });
